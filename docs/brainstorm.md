@@ -35,7 +35,7 @@ the project is for people who want to learn English in Arabic
 
 ## let's start coding!
 
-1. first start the front end: **solidjs, unocss, pnpm, vite** and deploy from day 1 online!
+1. first start the front end: **preact.js, scss, pnpm, vite** and deploy.
 
 ### brand colors
 
@@ -45,6 +45,6 @@ the project is for people who want to learn English in Arabic
 
 ### stack
 
-1. SolidJS + pnpm + unocss + vite = statichost.eu
+1. frontend = statichost.eu
 2. Ruby + Rails = backend -> Serv00
 
