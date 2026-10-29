@@ -1,0 +1,212 @@
+[
+  {
+    "word": "achieve",
+    "translation": "يُحقّق",
+    "example": "She worked hard to achieve her goals.",
+    "example_translation": "عملت بجد لتحقيق أهدافها.",
+    "types": ["verb"]
+  },
+  {
+    "word": "adapt",
+    "translation": "يتكيّف",
+    "example": "It took him a while to adapt to the new environment.",
+    "example_translation": "استغرق منه بعض الوقت ليتكيّف مع البيئة الجديدة.",
+    "types": ["verb"]
+  },
+  {
+    "word": "afford",
+    "translation": "يستطيع تحمّل التكلفة",
+    "example": "We can't afford to buy a new car this year.",
+    "example_translation": "لا نستطيع تحمّل تكلفة شراء سيارة جديدة هذا العام.",
+    "types": ["verb"]
+  },
+  {
+    "word": "anxious",
+    "translation": "قلِق",
+    "example": "She felt anxious before the interview.",
+    "example_translation": "شعرت بالقلق قبل المقابلة.",
+    "types": ["adj"]
+  },
+  {
+    "word": "appreciate",
+    "translation": "يُقدّر",
+    "example": "I really appreciate your help with the project.",
+    "example_translation": "أُقدّر حقاً مساعدتك في المشروع.",
+    "types": ["verb"]
+  },
+  {
+    "word": "approach",
+    "translation": "نهج / يقترب",
+    "example": "We need a different approach to solve this problem.",
+    "example_translation": "نحتاج إلى نهج مختلف لحل هذه المشكلة.",
+    "types": ["noun", "verb"]
+  },
+  {
+    "word": "argue",
+    "translation": "يُجادل",
+    "example": "They often argue about small things.",
+    "example_translation": "غالباً ما يتجادلون حول أشياء صغيرة.",
+    "types": ["verb"]
+  },
+  {
+    "word": "arrange",
+    "translation": "يُرتّب",
+    "example": "Can you arrange a meeting for next week?",
+    "example_translation": "هل يمكنك ترتيب اجتماع الأسبوع القادم؟",
+    "types": ["verb"]
+  },
+  {
+    "word": "attitude",
+    "translation": "موقف / سلوك",
+    "example": "His positive attitude inspires everyone around him.",
+    "example_translation": "موقفه الإيجابي يُلهم كل من حوله.",
+    "types": ["noun"]
+  },
+  {
+    "word": "available",
+    "translation": "متاح",
+    "example": "The manager is not available right now.",
+    "example_translation": "المدير غير متاح الآن.",
+    "types": ["adj"]
+  },
+  {
+    "word": "avoid",
+    "translation": "يتجنّب",
+    "example": "You should avoid eating too much sugar.",
+    "example_translation": "يجب أن تتجنّب تناول الكثير من السكر.",
+    "types": ["verb"]
+  },
+  {
+    "word": "aware",
+    "translation": "مُدرِك",
+    "example": "Are you aware of the risks involved?",
+    "example_translation": "هل أنت مُدرِك للمخاطر المتضمنة؟",
+    "types": ["adj"]
+  },
+  {
+    "word": "benefit",
+    "translation": "فائدة / يستفيد",
+    "example": "Regular exercise has many health benefits.",
+    "example_translation": "للتمرين المنتظم فوائد صحية كثيرة.",
+    "types": ["noun", "verb"]
+  },
+  {
+    "word": "borrow",
+    "translation": "يستعير",
+    "example": "Can I borrow your pen for a minute?",
+    "example_translation": "هل يمكنني استعارة قلمك لدقيقة؟",
+    "types": ["verb"]
+  },
+  {
+    "word": "budget",
+    "translation": "ميزانية",
+    "example": "We need to stay within our monthly budget.",
+    "example_translation": "نحتاج أن نبقى ضمن ميزانيتنا الشهرية.",
+    "types": ["noun", "verb"]
+  },
+  {
+    "word": "career",
+    "translation": "مسار مهني",
+    "example": "She decided to change her career after ten years.",
+    "example_translation": "قرّرت تغيير مسارها المهني بعد عشر سنوات.",
+    "types": ["noun"]
+  },
+  {
+    "word": "challenge",
+    "translation": "تحدٍّ / يتحدّى",
+    "example": "Learning a new language is a great challenge.",
+    "example_translation": "تعلّم لغة جديدة تحدٍّ كبير.",
+    "types": ["noun", "verb"]
+  },
+  {
+    "word": "claim",
+    "translation": "يدّعي / مطالبة",
+    "example": "He claims that he saw the accident happen.",
+    "example_translation": "يدّعي أنه رأى الحادث يقع.",
+    "types": ["verb", "noun"]
+  },
+  {
+    "word": "colleague",
+    "translation": "زميل عمل",
+    "example": "I get along well with my colleagues at work.",
+    "example_translation": "أتفاهم جيداً مع زملائي في العمل.",
+    "types": ["noun"]
+  },
+  {
+    "word": "commit",
+    "translation": "يلتزم / يرتكب",
+    "example": "She committed herself to finishing the project on time.",
+    "example_translation": "ألزمت نفسها بإنهاء المشروع في الوقت المحدد.",
+    "types": ["verb"]
+  },
+  {
+    "word": "compare",
+    "translation": "يقارن",
+    "example": "Don't compare yourself to others.",
+    "example_translation": "لا تقارن نفسك بالآخرين.",
+    "types": ["verb"]
+  },
+  {
+    "word": "complain",
+    "translation": "يشتكي",
+    "example": "He complained about the noise from the neighbours.",
+    "example_translation": "اشتكى من الضجيج الصادر من الجيران.",
+    "types": ["verb"]
+  },
+  {
+    "word": "concern",
+    "translation": "قلق / يهم",
+    "example": "Climate change is a major global concern.",
+    "example_translation": "تغيّر المناخ مصدر قلق عالمي كبير.",
+    "types": ["noun", "verb"]
+  },
+  {
+    "word": "confident",
+    "translation": "واثق",
+    "example": "She felt confident before giving her presentation.",
+    "example_translation": "شعرت بالثقة قبل تقديم عرضها.",
+    "types": ["adj"]
+  },
+  {
+    "word": "consider",
+    "translation": "يفكّر في / يعتبر",
+    "example": "We are considering moving to another city.",
+    "example_translation": "نفكّر في الانتقال إلى مدينة أخرى.",
+    "types": ["verb"]
+  },
+  {
+    "word": "convenient",
+    "translation": "مناسب / مُريح",
+    "example": "Is Friday morning convenient for you?",
+    "example_translation": "هل صباح الجمعة مناسب لك؟",
+    "types": ["adj"]
+  },
+  {
+    "word": "convince",
+    "translation": "يُقنع",
+    "example": "He tried to convince me to join the team.",
+    "example_translation": "حاول إقناعي بالانضمام إلى الفريق.",
+    "types": ["verb"]
+  },
+  {
+    "word": "decision",
+    "translation": "قرار",
+    "example": "It was a difficult decision to make.",
+    "example_translation": "كان قراراً صعباً اتخاذه.",
+    "types": ["noun"]
+  },
+  {
+    "word": "demand",
+    "translation": "يطالب / طلب",
+    "example": "The workers demanded higher wages.",
+    "example_translation": "طالب العمال بأجور أعلى.",
+    "types": ["verb", "noun"]
+  },
+  {
+    "word": "depend",
+    "translation": "يعتمد",
+    "example": "Everything depends on the weather tomorrow.",
+    "example_translation": "كل شيء يعتمد على الطقس غداً.",
+    "types": ["verb"]
+  }
+]
