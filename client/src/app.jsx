@@ -6,12 +6,15 @@ import Goals from './pages/Goals';
 import Grammar from './pages/Grammar';
 import NotFound from './pages/NotFound';
 import Vocabs from './pages/Vocabs';
+import VocabsLearn from './pages/VocabsLearn';
 
 export default function App() {
   return (
     <Router>
       <nav>
-        <Link href="/">رئيسية</Link> | <Link href="/goals">اهداف</Link> | <Link href="/vocabs">كلمات</Link>
+        <img src="/logo.png" style="width: 50px; display: block; margin: auto; " alt="علمني انجلش" />
+
+        <Link href="/">رئيسية</Link> | <Link href="/vocabs">كلمات</Link>
       </nav>
 
       <Switch>
@@ -19,6 +22,7 @@ export default function App() {
         <Route path="/goals" component={Goals} />
         <Route path="/grammar" component={Grammar} />
         <Route path="/vocabs" component={Vocabs} />
+        <Route path="/vocabs/learn" component={VocabsLearn} />
         <Route component={NotFound} />
       </Switch>
     </Router>
