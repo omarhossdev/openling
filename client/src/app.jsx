@@ -11,7 +11,7 @@ import VocabsLearn from './pages/VocabsLearn';
 export default function App() {
   return (
     <Router>
-      <nav>
+      <nav style="border-bottom: 2px solid black; padding-bottom: 5px;">
         <img src="/logo.png" style="width: 50px; display: block; margin: auto; " alt="علمني انجلش" />
 
         <Link href="/">رئيسية</Link> | <Link href="/vocabs">كلمات</Link>
