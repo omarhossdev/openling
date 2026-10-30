@@ -1,13 +1,15 @@
 <script setup>
-  import {ref} from "vue";
+  import {ref, computed} from "vue";
   import vocabs from '../data.json';
 
   const index = ref(0);
 
-  const word = ref(vocabs[index.value]['word']);
-  const translation = ref(vocabs[index.value]['translation']);
-  const example = ref(vocabs[index.value]['example']);
-  const exampleTranslation = ref(vocabs[index.value]['example_translation']);
+  const current = computed(() => vocabs[index.value])
+
+  const word = computed(() => current.value?.word ?? '')
+  const translation = computed(() => current.value?.translation ?? '')
+  const example = computed(() => current.value?.example ?? '')
+  const exampleTranslation = computed(() => current.value?.example_translation ?? '')
 
   const userInput = ref("")
   
@@ -28,15 +30,18 @@
   };
 
   function handle() {
-    speak()
-
     if (isCorrect.value) {
+      showDiv.value = false;
+      isCorrect.value = false;
+      userInput.value = ""
+
+      index.value += 1
       return;
     } 
     
+    speak()
     showDiv.value = true;
     isCorrect.value = userInput.value.trim().toLowerCase() === word.value
-    
   }
 
 </script>
@@ -50,7 +55,7 @@
       <div v-if="showDiv">
 
         <div v-if="isCorrect">
-          <p>{{ example }}</p>
+          <p dir="ltr">{{ example }}</p>
           <p>{{ exampleTranslation }}</p>
         </div>
         <div v-else>
