@@ -1,15 +1,18 @@
-import preact from '@preact/preset-vite'
-import { defineConfig } from 'vite'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [
+    vue(),
+    vueDevTools(),
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@data': path.resolve(__dirname, './src/data'),
-      '@styles': path.resolve(__dirname, './src/styles'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-    }
-  }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })
