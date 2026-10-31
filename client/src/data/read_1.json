@@ -1,0 +1,41 @@
+{
+  "title": "The Power of Empathy and Gratitude",
+  "description": "Learn how empathy and gratitude can make your life and the lives of others better.",
+  "ar_description": "تعلم كيف يمكن للتعاطف والامتنان أن يجعل حياتك وحياة الآخرين أفضل.",
+  "content": "Empathy and gratitude are two simple but powerful things. Empathy means you try to understand how other people feel. When a friend is sad, you listen and show you care. You do not judge them. You just stand by their side. Gratitude means you say thank you for the good things in your life. Maybe you are grateful for your family, your health, or a nice meal. When you are empathetic, people feel safe and loved. When you are grateful, you feel happier and more positive. These two habits work well together. A grateful heart helps you see the good in others, and empathy helps you share that good with them. You do not need money or special skills. You just need to open your heart. Try to be kind and say thank you every day. Small actions can make a big difference in the world.",
+  "questions": [
+    {
+      "id": 1,
+      "q": "What does empathy mean?",
+      "multiple_choices": [
+        "Understanding how other people feel",
+        "Ignoring other people's problems",
+        "Only thinking about yourself",
+        "Always being right in an argument"
+      ],
+      "correct_choice": 0
+    },
+    {
+      "id": 2,
+      "q": "What happens when you show gratitude?",
+      "multiple_choices": [
+        "You feel more sad and lonely",
+        "You feel happier and more positive",
+        "You forget about the good things",
+        "You stop caring about others"
+      ],
+      "correct_choice": 1
+    },
+    {
+      "id": 3,
+      "q": "According to the text, what do you need to be empathetic and grateful?",
+      "multiple_choices": [
+        "A lot of money",
+        "Special skills and training",
+        "An open heart and kind actions",
+        "A big house and a car"
+      ],
+      "correct_choice": 2
+    }
+  ]
+}

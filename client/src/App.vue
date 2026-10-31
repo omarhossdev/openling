@@ -8,6 +8,7 @@
       <!-- Use RouterLink instead of a tags to avoid page refresh -->
       <RouterLink to="/">رئيسية</RouterLink>
       <RouterLink to="/vocabs">كلمات</RouterLink>
+      <RouterLink to="/read/page">قراءة</RouterLink>
     </nav>
   </header>
 

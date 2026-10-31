@@ -1,6 +1,7 @@
 <script setup>
   import { ref, computed } from "vue";
   import { onKeyStroke } from '@vueuse/core'
+  import { speak } from "@/utils/helpers";
   import vocabs from '../data.json';
 
   // Task
@@ -24,19 +25,6 @@
   
   const isCorrect = ref(false)
   const showDiv = ref(false)
-
-  const speak = (w) => {
-    if (!('speechSynthesis' in window)) {
-      alert('ميزة سماع الكلمة لا تعمل في متصفحك');
-      return;
-    }
-    window.speechSynthesis.cancel(); // stop any current speech
-    const utter = new SpeechSynthesisUtterance(w);
-    utter.lang = 'en-US';
-    utter.rate = 0.9;   // slightly slower, clearer
-    utter.pitch = 1;
-    window.speechSynthesis.speak(utter);
-  };
 
   function handle() {
     if (isCorrect.value) {
