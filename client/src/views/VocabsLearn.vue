@@ -25,13 +25,13 @@
   const isCorrect = ref(false)
   const showDiv = ref(false)
 
-  const speak = () => {
+  const speak = (w) => {
     if (!('speechSynthesis' in window)) {
       alert('ميزة سماع الكلمة لا تعمل في متصفحك');
       return;
     }
     window.speechSynthesis.cancel(); // stop any current speech
-    const utter = new SpeechSynthesisUtterance(word.value);
+    const utter = new SpeechSynthesisUtterance(w);
     utter.lang = 'en-US';
     utter.rate = 0.9;   // slightly slower, clearer
     utter.pitch = 1;
@@ -44,9 +44,9 @@
 
       if (shownIndexes.value[newIndex]) return handle()
       
-      if (allShown.value) shownIndexes.value.fill(false) // if all words are shown, reset shownIndexes to all false to reshow them again
+      //if (allShown.value) shownIndexes.value.fill(false) // if all words are shown, reset shownIndexes to all false to reshow them again
 
-      index.value = newIndex
+      index.value = newIndex;
 
       showDiv.value = false;
       isCorrect.value = false;
@@ -54,7 +54,7 @@
       return;
     } 
     
-    speak()
+    speak(word.value)
     showDiv.value = true;
     isCorrect.value = userInput.value.trim().toLowerCase() === word.value
     shownIndexes[index] = true;
@@ -67,19 +67,19 @@
     <section>
       <p>{{ translation }}</p>
 
-      <input dir="ltr" type="text" v-model="userInput" :class="isCorrect && 'correct'" />
+      <input dir="ltr" type="text" v-model="userInput" :disabled="isCorrect" :class="isCorrect && 'correct'" placeholder="اكتبها بالانجليزية" />
 
       <div v-if="showDiv">
 
-        <div v-if="isCorrect">
-          <p dir="ltr">{{ example }}</p>
+        <div v-if="isCorrect" class="example-container">
+          <p @click="speak(example)" class="example" dir="ltr">{{ example }}</p>
           <p>{{ exampleTranslation }}</p>
         </div>
         <div v-else>
-          <p style="text-align: center;">{{ word }}</p>
+          <p style="text-align: center; margin-bottom: 6px;">{{ word }}</p>
         </div>
 
-        <button @click="speak" class="speak">استمع</button>
+        <button @click="speak(word)" class="speak">استمع</button>
       </div>
     </section>
 
@@ -116,13 +116,13 @@ input {
   }
 
   &.correct {
-    background: #afa;
-    border: darkgreen;
-  }
-
-  &.wrong {
-    background: rgb(255, 170, 170);
-    border: darkred;
+    background: transparent;
+    border: transparent;
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: bold;
   }
 }
 
@@ -148,6 +148,20 @@ input {
   text-align: center;
   display: block;
   width: 100%;
+}
+
+.example {
+  cursor: pointer;
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+.example-container {
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 </style>
