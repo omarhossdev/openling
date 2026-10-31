@@ -1,8 +1,17 @@
 <script setup>
-  import {ref, computed} from "vue";
+  import { ref, computed } from "vue";
+  import { onKeyStroke } from '@vueuse/core'
   import vocabs from '../data.json';
 
-  const index = ref(0);
+  // Task
+  //------
+  // show words randomly
+
+  const getRandomIndex = () => Math.floor(Math.random() * vocabs.length);
+  const shownIndexes = ref(new Array(vocabs.length).fill(false));
+  const allShown = computed(() => shownIndexes.value.every(true)) // checks if all words are shown or not
+
+  const index = ref(getRandomIndex());
 
   const current = computed(() => vocabs[index.value])
 
@@ -31,19 +40,27 @@
 
   function handle() {
     if (isCorrect.value) {
+      const newIndex = getRandomIndex()
+
+      if (shownIndexes.value[newIndex]) return handle()
+      
+      if (allShown.value) shownIndexes.value.fill(false) // if all words are shown, reset shownIndexes to all false to reshow them again
+
+      index.value = newIndex
+
       showDiv.value = false;
       isCorrect.value = false;
       userInput.value = ""
-
-      index.value += 1
       return;
     } 
     
     speak()
     showDiv.value = true;
     isCorrect.value = userInput.value.trim().toLowerCase() === word.value
+    shownIndexes[index] = true;
   }
 
+  onKeyStroke('Enter', handle)
 </script>
 <template>
   <main>
