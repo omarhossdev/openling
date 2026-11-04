@@ -1,0 +1,16 @@
+$primary: #794dfc;
+$secondary: #28dea3;
+$red: #f76e6d;
+$font-color: #040c56;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 { color: $font-color; }
+
+main {
+  padding-top: 100px;
+}

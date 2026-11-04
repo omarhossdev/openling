@@ -1,19 +1,21 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
+  import TopNav from './views/components/TopNav.vue';
+  import Navbar from './views/components/Navbar.vue';
+  import './main.scss'
 </script>
 
 <template>
   <header>
-    <nav>
-      <!-- Use RouterLink instead of a tags to avoid page refresh -->
-      <RouterLink to="/">رئيسية</RouterLink>
-      <RouterLink to="/vocabs">كلمات</RouterLink>
-      <RouterLink to="/read/page">قراءة</RouterLink>
-    </nav>
+    <TopNav></TopNav>
+    <Navbar></Navbar>
   </header>
 
   <!-- Route matching components will render here -->
-  <RouterView />
+   <main>
+    <RouterView />
+   </main>
+  
 </template>
 
 <style scoped>
