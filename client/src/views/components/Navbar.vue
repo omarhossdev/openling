@@ -55,6 +55,7 @@ nav {
     justify-self: stretch;  
     min-width: 0;
     min-height: 0;    
+    width: 100%;
     overflow: hidden;  
     color: $font-color;
     text-decoration: none;
