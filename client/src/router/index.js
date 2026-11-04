@@ -15,8 +15,8 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: '/vocabs',
-      name: 'vocabs',
+      path: '/vocab',
+      name: 'vocab',
       component: Vocabs,
     },
     {

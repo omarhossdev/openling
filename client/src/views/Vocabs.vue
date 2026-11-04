@@ -5,83 +5,145 @@ import vocabs from '../data.json'
 
 <template>
   <main class="main">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>الكلمة</th>
-          <th>الترجمة</th>
-          <th>النوع</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(vocab, i) in vocabs" :key="i">
-          <td class="tdata">{{ vocab.word }}</td>
-          <td class="tdata">{{ vocab.translation }}</td>
-          <td class="types">
-            <span v-for="(type, j) in vocab.types" :key="j" class="type">
-              {{ type }}
-            </span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <h1>الكلمات 📖</h1>
 
-    <RouterLink to="/vocabs/learn" class="startBtn">ابدأ التعلم</RouterLink>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>الكلمة</th>
+            <th>الترجمة</th>
+            <th>النوع</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(vocab, i) in vocabs" :key="i">
+            <td class="tdata word">{{ vocab.word }}</td>
+            <td class="tdata">{{ vocab.translation }}</td>
+            <td class="types">
+              <span v-for="(type, j) in vocab.types" :key="j" class="type">
+                {{ type }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <RouterLink to="/vocabs/learn" class="startBtn">ابدأ التعلم 🚀</RouterLink>
   </main>
 </template>
 
 <style scoped lang="scss">
-$primary: #0f5973;
+$primary: #794dfc;
+$font-color: #040c56;
+$light: #f4f0ff;
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  gap: 18px;
+  padding: 16px 16px 100px;   /* 🧘 bottom space for fixed nav */
+  min-height: 100dvh;
+  background: #fff;
+  color: $font-color;
+  font-family: inherit;
+
+  h1 {
+    font-size: clamp(20px, 5vw, 26px);
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;           /* 📱 scrolls if too wide */
+  border-radius: 16px;
+  border: 2px solid #eee;
+  box-shadow: 0 2px 10px rgba(121, 77, 252, 0.06);
 }
 
 .table {
-  border-radius: 14px;
+  width: 100%;
   border-collapse: collapse;
-  text-align: center;
-}
+  font-size: 14px;
 
-.table, th,
-.tdata {
-  text-align: center;
-  border: 2px solid #333;
-  padding: 5px;
-}
+  thead {
+    background: $light;
 
-.tr {
-  border-bottom: 2px solid #333;
-}
+    th {
+      padding: 12px 10px;
+      font-weight: 800;
+      color: $primary;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+  }
 
-.tdata {
-  border-bottom: 0;
-}
+  tbody tr {
+    border-top: 1px solid #f0f0f0;
+    transition: background 0.15s ease;
 
-.types {
-  padding: 4px;
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
-}
+    &:hover {
+      background: rgba($primary, 0.04);
+    }
+  }
 
-.type {
-  font-size: 10px;
-  text-decoration: underline;
-  color: darkblue;
+  .tdata {
+    padding: 12px 10px;
+    text-align: center;
+    color: $font-color;
+
+    &.word {
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+
+  .types {
+    padding: 8px 6px;
+    text-align: center;
+
+    .type {
+      display: inline-block;
+      margin: 2px;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 999px;
+      background: rgba($primary, 0.10);
+      color: $primary;
+    }
+  }
 }
 
 .startBtn {
-  background-color: $primary;
-  color: #fff;
-  font-weight: bold;
-  padding: 7px;
-  border-radius: 4px;
-  border: 2px solid #111;
-  text-align: center;
+  position: sticky;            /* 📌 sticks above bottom nav */
+  bottom: 84px;
   display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  background: $primary;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba($primary, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($primary, 0.45);
+  }
+
+  &:active { transform: translateY(0); }
+
+  &:focus-visible {
+    outline: 2px solid $font-color;
+    outline-offset: 2px;
+  }
 }
 </style>
