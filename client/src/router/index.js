@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import Vocabs from '../views/Vocabs.vue'
-import VocabsLearn from '../views/VocabsLearn.vue'
-import ReadHome from '../views/read/Home.vue'
-import ReadPage from '../views/read/Page.vue'
+import Home from '@views/Home.vue'
+import Vocabs from '@views/Vocabs.vue'
+import VocabsLearn from '@views/VocabsLearn.vue'
+import ReadHome from '@views/read/Home.vue'
+import ReadPage from '@views/read/Page.vue'
 
 
 const router = createRouter({

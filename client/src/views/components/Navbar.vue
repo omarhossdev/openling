@@ -1,8 +1,9 @@
 <script setup>
   import { RouterLink } from 'vue-router'
+  import '@styles/bottom_nav.scss';
 </script>
 <template>
-  <nav>
+  <nav id="bottom-nav">
     <RouterLink class="link" to="/">
       <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M104,216V152h48v64h64V120a8,8,0,0,0-2.34-5.66l-80-80a8,8,0,0,0-11.32,0l-80,80A8,8,0,0,0,40,120v96Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></div>
 
@@ -28,73 +29,3 @@
     </RouterLink>
   </nav>
 </template>
-<style scoped lang="scss">
-$primary: #794dfc;
-$font-color: #040c56;
-
-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: auto;
-  height: 72px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background: #fff;
-  border-top: 2px solid #eee;
-  padding: 5px!important; 
-  box-shadow: 0 -2px 12px rgba(121, 77, 252, 0.08);
-
-  .link { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    justify-self: stretch;  
-    min-width: 0;
-    min-height: 0;    
-    width: 100%;
-    overflow: hidden;  
-    color: $font-color;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 11px;
-    transition: color 0.15s ease, background 0.15s ease;
-    border-radius: 12px;
-
-    .icon-wrap {
-      flex: 1;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      min-height: 0;
-
-      svg {
-        width: 100%;
-        height: 100%;
-        transform: scale(0.74); /* 🎯 punch in past viewBox whitespace */
-        transform-origin: center;
-        fill: currentColor;
-      }
-    }
-
-    span {
-      flex-shrink: 0;         /* 📌 text stays readable */
-      padding-bottom: 6px;
-    }
-
-    &:hover {
-      background: rgba($primary, 0.06);
-    }
-
-    &.router-link-active {
-      color: $primary;                /* 💜 active */
-      background: rgba($primary, 0.10);
-    }
-  }
-}
-</style>
