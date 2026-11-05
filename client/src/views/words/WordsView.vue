@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import "@styles/views/vocabs.scss"
-import vocabs from '../data.json'
+import "@styles/views/words.scss"
+import vocabs from '@/data/data.json'
 </script>
 
 <template>
@@ -31,6 +31,6 @@ import vocabs from '../data.json'
       </table>
     </div>
 
-    <RouterLink to="/vocabs/learn" class="startBtn">ابدأ التعلم 🚀</RouterLink>
+    <RouterLink to="/words/practice" class="startBtn">ابدأ التعلم 🚀</RouterLink>
   </main>
 </template>

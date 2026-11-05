@@ -16,6 +16,7 @@ export default defineConfig({
       '@views': path.resolve(import.meta.dirname, './src/views'),
       '@styles': path.resolve(import.meta.dirname, './src/styles'),
       '@utils': path.resolve(import.meta.dirname, './src/utils'),
+      '@components': path.resolve(import.meta.dirname, './src/components'),
     },
   },
   css: {
